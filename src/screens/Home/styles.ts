@@ -1,7 +1,11 @@
 import styled from "styled-components/native";
 import { LinearGradient } from 'expo-linear-gradient';
 
-export const Wrapper = styled(LinearGradient)`
+export const Wrapper = styled(LinearGradient)<{ top: number }>`
     flex: 1;
     align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    padding-left: 40px;
+    padding-right: 40px;
 `;
