@@ -10,7 +10,7 @@ import { WeatherApi } from "../../services/api.service";
 import useCurrentWeather from "../../stores/currentWeather/currentWeather.store";
 
 export default function Home() {
-    const { setCurrentWeather } = useCurrentWeather()
+    const { setCurrentWeather, currentWeather } = useCurrentWeather()
     async function getValues() {
         try {
             const response = await WeatherApi().getCurrentWeather();
@@ -36,8 +36,16 @@ export default function Home() {
             ]}
         >
             <View style={{ gap: 20, width: "100%" }}>
-                <InfoForecast/>
-                <WrapperDetails/>
+                <InfoForecast
+                    iconImage={currentWeather.current.condition.icon}
+                    temperature={currentWeather.current.temp_c}
+                    description={currentWeather.current.condition.text}
+                />
+                <WrapperDetails
+                    humidity={currentWeather.current.humidity}
+                    precip={currentWeather.current.precip_mm}
+                    pressure={currentWeather.current.pressure_in}
+                />
                 <WrapperForecastToday/>
             </View>
         </Wrapper>

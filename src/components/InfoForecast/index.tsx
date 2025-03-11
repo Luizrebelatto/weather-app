@@ -1,12 +1,21 @@
 import React from "react";
-import { Wrapper, MaxMin, Temperature } from "./styles";
+import { Wrapper, Temperature, IconImage, Description } from "./styles";
 
+interface IInfoForecast {
+    temperature: number;
+    iconImage: string;
+    description: string;
+}
 
-export default function InfoForecast() {
+export default function InfoForecast(data: IInfoForecast) {
     return (
         <Wrapper>
-            <Temperature>28º</Temperature>
-            <MaxMin>Max: 31º Min: 25º</MaxMin>
+            <IconImage
+                source={{ uri: `https:${data.iconImage}` }}
+                resizeMode="contain"
+            />
+            <Temperature>{`${data.temperature} °C`}</Temperature>
+            <Description>{data.description}</Description>
         </Wrapper>
     )
 }

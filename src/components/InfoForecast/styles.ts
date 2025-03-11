@@ -10,8 +10,14 @@ export const Temperature = styled.Text`
     font-weight: 600;
 `;
 
-export const MaxMin = styled.Text`
+export const Description = styled.Text`
     color: ${({ theme }) => theme.colors.white};
     font-size: 18px;
     font-weight: 400;
+`;
+
+export const IconImage = styled.Image`
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
 `;
