@@ -1,6 +1,7 @@
 import React from "react";
 import { Wrapper, MaxMin, Temperature } from "./styles";
 
+
 export default function InfoForecast() {
     return (
         <Wrapper>
