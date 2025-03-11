@@ -14,4 +14,10 @@ export const Text = styled.Text`
     color: ${({ theme }) => theme.colors.white};
     font-weight: 400;
     font-size: 18px;
+    text-align: center;
+`;
+
+export const ImageIcon = styled.Image`
+    width: 40px;
+    height: 40px;
 `;

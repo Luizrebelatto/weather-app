@@ -1,14 +1,23 @@
 import React from "react"
-import { Wrapper, Text } from "./styles";
+import { Wrapper, Text, ImageIcon } from "./styles";
 import Entypo from '@expo/vector-icons/Entypo';
 import theme from "../../general/theme";
 
-export default function ItemForecastToday() {
+interface IItemForecastToday {
+    temperature: number;
+    iconImage: string;
+    description: any;
+}
+
+export default function ItemForecastToday(data: IItemForecastToday) {
     return (
         <Wrapper>
-            <Text>32°C</Text>
-            <Entypo name="icloud" size={30} color={theme.colors.white} />
-            <Text>18:00</Text>
+            <Text>{`${data.temperature} °C`}</Text>
+            <ImageIcon
+                source={{ uri: `https:${data.iconImage}` }}
+                resizeMode="contain"
+            />
+            <Text>{data.description}</Text>
         </Wrapper>
     )
 }

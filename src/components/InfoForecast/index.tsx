@@ -5,6 +5,7 @@ interface IInfoForecast {
     temperature: number;
     iconImage: string;
     description: string;
+    unit: string;
 }
 
 export default function InfoForecast(data: IInfoForecast) {
@@ -14,7 +15,7 @@ export default function InfoForecast(data: IInfoForecast) {
                 source={{ uri: `https:${data.iconImage}` }}
                 resizeMode="contain"
             />
-            <Temperature>{`${data.temperature} °C`}</Temperature>
+            <Temperature>{`${data.temperature} ${data.unit}`}</Temperature>
             <Description>{data.description}</Description>
         </Wrapper>
     )

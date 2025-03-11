@@ -8,16 +8,22 @@ import { View, Switch } from "react-native"
 
 import { WeatherApi } from "../../services/api.service";
 import useCurrentWeather from "../../stores/currentWeather/currentWeather.store";
+import useForecastWeather from "../../stores/forecastWeather/forecastWeather.store";
 
 export default function Home() {
     const { setCurrentWeather, currentWeather } = useCurrentWeather()
+    const { forecastWeather, setForecastWeather } = useForecastWeather()
+
     const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     async function getValues() {
         try {
-            const response = await WeatherApi().getCurrentWeather();
-            console.log("linha 15: ", response.data)
-            setCurrentWeather(response.data)
+            // const response = await WeatherApi().getCurrentWeather();
+            const response = await WeatherApi().getForecastWeather();
+            console.log("djdjd: ", response.data)
+            setForecastWeather(response.data)
+            // console.log("linha 15: ", response.data)
+            // setCurrentWeather(response.data)
             
         } catch (error) {
             console.log("Response: ", Error)
@@ -29,6 +35,8 @@ export default function Home() {
         console.log("kssjsjs")
         getValues()
     },[])
+
+
     return (
         <Wrapper
             colors={[
@@ -48,17 +56,22 @@ export default function Home() {
                 />
             </View>
             <View style={{ gap: 20, width: "100%" }}>
-                <InfoForecast
+                {/* <InfoForecast
                     iconImage={currentWeather.current.condition.icon}
                     temperature={isEnabled ? currentWeather.current.temp_c : currentWeather.current.temp_f}
                     description={currentWeather.current.condition.text}
+                    unit={isEnabled ? "°C" : "°F"}
                 />
                 <WrapperDetails
                     humidity={currentWeather.current.humidity}
                     precip={currentWeather.current.precip_mm}
                     pressure={currentWeather.current.pressure_in}
+                /> */}
+                <WrapperForecastToday
+                    current={forecastWeather.current}
+                    forecast={forecastWeather.forecast}
+                    location={forecastWeather.location}
                 />
-                <WrapperForecastToday/>
             </View>
         </Wrapper>
     )
