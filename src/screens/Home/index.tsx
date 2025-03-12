@@ -15,27 +15,7 @@ export default function Home() {
     const { forecastWeather, setForecastWeather } = useForecastWeather()
 
     const [isEnabled, setIsEnabled] = useState(false);
-  const toggleSwitch = () => setIsEnabled(previousState => !previousState);
-    async function getValues() {
-        try {
-            // const response = await WeatherApi().getCurrentWeather();
-            const response = await WeatherApi().getForecastWeather();
-            console.log("djdjd: ", response.data)
-            setForecastWeather(response.data)
-            // console.log("linha 15: ", response.data)
-            // setCurrentWeather(response.data)
-            
-        } catch (error) {
-            console.log("Response: ", Error)
-        }    
-    }
-
-
-    useEffect(() => {
-        console.log("kssjsjs")
-        getValues()
-    },[])
-
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
 
     return (
         <Wrapper
@@ -67,11 +47,11 @@ export default function Home() {
                     precip={currentWeather.current.precip_mm}
                     pressure={currentWeather.current.pressure_in}
                 /> */}
-                <WrapperForecastToday
+                {/* <WrapperForecastToday
                     current={forecastWeather.current}
                     forecast={forecastWeather.forecast}
                     location={forecastWeather.location}
-                />
+                /> */}
             </View>
         </Wrapper>
     )

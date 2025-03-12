@@ -13,7 +13,7 @@ export const Wrapper = styled.View`
 export const Text = styled.Text`
     color: ${({ theme }) => theme.colors.white};
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
 `;
 
