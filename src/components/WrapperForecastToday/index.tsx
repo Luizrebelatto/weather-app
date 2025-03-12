@@ -8,15 +8,14 @@ import { IForecastWeather } from "../../stores/forecastWeather/types";
 
 
 export default function WrapperForecastToday(data: IForecastWeather) {
+    const day = new Date(data.location.localtime).getDate();
+    const month = new Date(data.location.localtime).toLocaleString("en-US", { month: "long" });
 
-    useEffect(() => {
-        console.log("linha 13: ", data.forecast.forecastday[0])
-    },[])
     return (
         <Wrapper>
             <WrapperHeader>
                 <Title>Today</Title>
-                <Day>{data.location.localtime}</Day>
+                <Day>{`${month} ${day}`}</Day>
             </WrapperHeader>
             <ScrollView 
                 style={{ flexDirection: "row", paddingHorizontal: 20, paddingBottom: 20 }}
