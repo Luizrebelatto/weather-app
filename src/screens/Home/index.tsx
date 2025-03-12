@@ -4,15 +4,19 @@ import theme from "../../general/theme";
 import InfoForecast from "../../components/InfoForecast";
 import WrapperDetails from "../../components/WrapperDetails";
 import WrapperForecastToday from "../../components/WrapperForecastToday";
-import { View, Switch } from "react-native"
+import { View, Switch, ActivityIndicator } from "react-native"
 
-import { WeatherApi } from "../../services/api.service";
 import useCurrentWeather from "../../stores/currentWeather/currentWeather.store";
 import useForecastWeather from "../../stores/forecastWeather/forecastWeather.store";
+import { useFetchDataCurrentWeather } from "../../hooks/useFetchDataCurrentWeather";
+import { useFetchDataForecastWeather } from "../../hooks/useFetchDataForecastWeather";
 
 export default function Home() {
-    const { setCurrentWeather, currentWeather } = useCurrentWeather()
-    const { forecastWeather, setForecastWeather } = useForecastWeather()
+    const { currentWeather } = useCurrentWeather()
+    const { forecastWeather } = useForecastWeather()
+
+    const { isLoading: isLoadingCurrentWeather, error: errorCurrentWeather } = useFetchDataCurrentWeather();
+    const { isLoading: isLoadingForecastWeather, error: errorForecast } = useFetchDataForecastWeather();
 
     const [isEnabled, setIsEnabled] = useState(false);
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
@@ -36,22 +40,32 @@ export default function Home() {
                 />
             </View>
             <View style={{ gap: 20, width: "100%" }}>
-                {/* <InfoForecast
-                    iconImage={currentWeather.current.condition.icon}
-                    temperature={isEnabled ? currentWeather.current.temp_c : currentWeather.current.temp_f}
-                    description={currentWeather.current.condition.text}
-                    unit={isEnabled ? "°C" : "°F"}
-                />
-                <WrapperDetails
-                    humidity={currentWeather.current.humidity}
-                    precip={currentWeather.current.precip_mm}
-                    pressure={currentWeather.current.pressure_in}
-                /> */}
-                {/* <WrapperForecastToday
-                    current={forecastWeather.current}
-                    forecast={forecastWeather.forecast}
-                    location={forecastWeather.location}
-                /> */}
+                {isLoadingCurrentWeather ? 
+                    <ActivityIndicator size={"large"} color="white"/> 
+                :
+                    <>
+                        <InfoForecast
+                            iconImage={currentWeather.current.condition.icon}
+                            temperature={isEnabled ? currentWeather.current.temp_c : currentWeather.current.temp_f}
+                            description={currentWeather.current.condition.text}
+                            unit={isEnabled ? "°C" : "°F"}
+                        />
+                        <WrapperDetails
+                            humidity={currentWeather.current.humidity}
+                            precip={currentWeather.current.precip_mm}
+                            pressure={currentWeather.current.pressure_in}
+                        />
+                    </>
+                }
+                
+                {isLoadingForecastWeather ? 
+                    <ActivityIndicator size={"large"} color="white"/> 
+                :
+                    <WrapperForecastToday
+                        data={forecastWeather}
+                        isEnableCelsius={isEnabled}
+                    />
+                }
             </View>
         </Wrapper>
     )

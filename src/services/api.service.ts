@@ -1,5 +1,3 @@
-import { IWeather } from "../stores/currentWeather/types";
-import { IForecastWeather } from "../stores/forecastWeather/types";
 import { api } from "./api"
 import apiConfig from "./api.config";
 

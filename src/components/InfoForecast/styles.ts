@@ -19,5 +19,8 @@ export const Description = styled.Text`
 export const IconImage = styled.Image`
     width: 120px;
     height: 120px;
+    border: 1px solid white;
     border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 `;

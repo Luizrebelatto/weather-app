@@ -4,7 +4,7 @@ import Entypo from '@expo/vector-icons/Entypo';
 import theme from "../../general/theme";
 
 interface IItemForecastToday {
-    temperature: number;
+    temperature: string;
     iconImage: string;
     description: any;
 }
@@ -12,7 +12,7 @@ interface IItemForecastToday {
 export default function ItemForecastToday(data: IItemForecastToday) {
     return (
         <Wrapper>
-            <Text>{`${data.temperature} °C`}</Text>
+            <Text>{`${data.temperature}`}</Text>
             <ImageIcon
                 source={{ uri: `https:${data.iconImage}` }}
                 resizeMode="contain"
