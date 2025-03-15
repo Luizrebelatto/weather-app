@@ -1,7 +1,5 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Wrapper, Text, ImageIcon } from "./styles";
-import Entypo from '@expo/vector-icons/Entypo';
-import theme from "../../general/theme";
 
 interface IItemForecastToday {
     temperature: string;
