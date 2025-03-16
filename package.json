@@ -39,6 +39,12 @@
   "private": true,
   "jest": {
     "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(@expo/vector-icons|react-native|expo|@react-native|react-native-*)/)"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    },
     "moduleFileExtensions": [
       "ts",
       "tsx",

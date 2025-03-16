@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Wrapper, Title, Day, WrapperHeader } from "./styles";
 import ItemForecastToday from "../ItemForecastToday";
 import { ScrollView } from "react-native"
