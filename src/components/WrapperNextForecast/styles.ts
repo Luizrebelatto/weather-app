@@ -8,15 +8,9 @@ export const Wrapper = styled.View`
 `;
 
 export const Title = styled.Text`
-    color: ${({ theme }) => theme.colors.white};;
+    color: ${({ theme }) => theme.colors.white};
     font-weight: bold;
     font-size: 20px;
-`;
-
-export const Day = styled.Text`
-    color: ${({ theme }) => theme.colors.white};;
-    font-weight: 400;
-    font-size: 18px;
 `;
 
 export const WrapperHeader = styled.View`

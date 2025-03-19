@@ -14,16 +14,16 @@ export default function WrapperDetails(data: IWrapperDetails) {
     return (
         <Wrapper>
             <WrapperItem>
-                <FontAwesome5 name="cloud-rain" size={16} color={theme.colors.white} />
-                <Value>{data.precip}</Value>
+                <FontAwesome5 testID="iconCloudRain" name="cloud-rain" size={16} color={theme.colors.white} />
+                <Value testID="valuePrecip">{data.precip}</Value>
             </WrapperItem>
             <WrapperItem>
-                <FontAwesome5 name="temperature-low" size={24} color={theme.colors.white} />
-                <Value>{data.pressure}</Value>
+                <FontAwesome5 testID="iconTemperature" name="temperature-low" size={24} color={theme.colors.white} />
+                <Value testID="valuePressure">{data.pressure}</Value>
             </WrapperItem>
             <WrapperItem>
-                <MaterialCommunityIcons name="air-humidifier" size={16} color={theme.colors.white} />
-                <Value>{data.humidity}</Value>
+                <MaterialCommunityIcons testID="air-humidifier" name="air-humidifier" size={16} color={theme.colors.white} />
+                <Value testID="valueHumidity">{data.humidity}</Value>
             </WrapperItem>
         </Wrapper>
     )
