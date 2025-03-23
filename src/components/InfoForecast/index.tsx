@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Wrapper, Temperature, IconImage, Description } from "./styles";
 
 interface IInfoForecast {

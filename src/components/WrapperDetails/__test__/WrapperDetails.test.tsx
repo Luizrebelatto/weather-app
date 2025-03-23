@@ -31,9 +31,9 @@ describe("Component WrapperNextForecast", () => {
             </ThemeProvider>
         )
         
-        expect(getByTestId("iconCloudRain")).toBeTruthy();
-        expect(getByTestId("iconTemperature")).toBeTruthy();
-        expect(getByTestId("air-humidifier")).toBeTruthy();
+        expect(getByTestId("iconCloudRain")).toBeOnTheScreen();
+        expect(getByTestId("iconTemperature")).toBeOnTheScreen();
+        expect(getByTestId("air-humidifier")).toBeOnTheScreen();
     })
 
     it('the texts humidity, precip and pressure is rendered!', () => {

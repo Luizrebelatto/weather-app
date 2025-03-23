@@ -18,7 +18,7 @@ describe("Component WrapperNextForecast", () => {
     it("should render title correctly", () => {
         const { getByText } = render(
             <ThemeProvider theme={theme}>
-                <WrapperNextForecast title="Next  Forecast" />
+                <WrapperNextForecast title="Next Forecast" />
             </ThemeProvider>
         );
 
