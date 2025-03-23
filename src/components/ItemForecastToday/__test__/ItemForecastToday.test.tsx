@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 
 import { ThemeProvider } from "styled-components/native";
-import theme from "../../../general/theme";
+import theme from "general/theme";
 import ItemForecastToday from "../index";
 
 test('the component ItemForecastToday rendered', () => {

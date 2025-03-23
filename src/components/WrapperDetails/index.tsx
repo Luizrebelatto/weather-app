@@ -2,7 +2,7 @@ import React from "react"
 import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import { Wrapper, Value, WrapperItem } from "./styles";
-import theme from "../../general/theme";
+import theme from "general/theme";
 
 interface IWrapperDetails {
     humidity: number;

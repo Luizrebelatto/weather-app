@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "@testing-library/react-native";
 import { ThemeProvider } from "styled-components/native";
-import theme from "../../../general/theme";
+import theme from "general/theme";
 import WrapperDetails from "../index";
 
 jest.mock('@expo/vector-icons/FontAwesome5', () => 'FontAwesome5');

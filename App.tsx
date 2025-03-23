@@ -2,8 +2,8 @@ import React from 'react';
 import { ThemeProvider } from "styled-components/native"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-import Home from './src/screens/Home';
-import theme from './src/general/theme';
+import Home from 'screens/Home';
+import theme from 'general/theme';
 
 const queryClient = new QueryClient();
 

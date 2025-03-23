@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import useForecastWeather from "../stores/forecastWeather/forecastWeather.store";
 import { WeatherApi } from "../services/api.service";
 
-export const useFetchDataForecastWeather = () => {
+const useFetchDataForecastWeather = () => {
     const { setForecastWeather } = useForecastWeather();
 
     const queryOptions = {
@@ -16,3 +16,5 @@ export const useFetchDataForecastWeather = () => {
 
     return useQuery(queryOptions);
 };
+
+export default useFetchDataForecastWeather;

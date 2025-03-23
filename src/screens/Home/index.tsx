@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Title, Wrapper } from "./styles";
-import theme from "../../general/theme";
-import InfoForecast from "../../components/InfoForecast";
-import WrapperDetails from "../../components/WrapperDetails";
-import WrapperForecastToday from "../../components/WrapperForecastToday";
 import { View, Switch, ActivityIndicator } from "react-native"
 
-import useCurrentWeather from "../../stores/currentWeather/currentWeather.store";
-import useForecastWeather from "../../stores/forecastWeather/forecastWeather.store";
-import { useFetchDataCurrentWeather } from "../../hooks/useFetchDataCurrentWeather";
-import { useFetchDataForecastWeather } from "../../hooks/useFetchDataForecastWeather";
+import { InfoForecast, WrapperDetails, WrapperForecastToday } from "components";
+import { useFetchDataForecastWeather, useFetchDataCurrentWeather } from "hooks"
+import { useForecastWeather, useCurrentWeather } from "stores";
+import theme from "general/theme";
 
 export default function Home() {
     const { currentWeather } = useCurrentWeather()

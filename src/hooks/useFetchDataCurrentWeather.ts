@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
-import useCurrentWeather from "../stores/currentWeather/currentWeather.store";
+import { useCurrentWeather } from "stores";
 import { WeatherApi } from "../services/api.service";
 
-export const useFetchDataCurrentWeather = () => {
+const useFetchDataCurrentWeather = () => {
     const { setCurrentWeather } = useCurrentWeather();
 
     const queryOptions = {
@@ -16,3 +16,5 @@ export const useFetchDataCurrentWeather = () => {
 
     return useQuery(queryOptions);
 };
+
+export default useFetchDataCurrentWeather;

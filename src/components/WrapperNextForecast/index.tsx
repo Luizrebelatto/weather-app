@@ -1,7 +1,7 @@
 import React from "react"
 import Feather from '@expo/vector-icons/Feather';
 import { Wrapper, Title, WrapperHeader } from "./styles";
-import theme from "../../general/theme";
+import theme from "general/theme";
 
 interface IWrapperNextForecast {
     title: string;

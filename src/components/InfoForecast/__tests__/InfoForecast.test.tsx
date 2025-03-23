@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 import InfoForecast from "../index";
 import { ThemeProvider } from "styled-components/native";
-import theme from "../../../general/theme";
+import theme from "general/theme";
 
 test('the component InfoForecast rendered', () => {
     render(
