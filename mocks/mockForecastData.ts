@@ -1,4 +1,4 @@
-const mockForecastData = {
+export const mockForecastData = {
     current: {
         cloud: 0, 
         condition: {
