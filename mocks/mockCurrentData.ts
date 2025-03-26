@@ -1,4 +1,4 @@
-const mockCurrentData = {
+export const mockCurrentData = {
     current: {
         cloud: 0, 
         condition: {
@@ -31,7 +31,7 @@ const mockCurrentData = {
             wind_kph: 8.3, 
             wind_mph: 5.1, 
             windchill_c: 28, 
-        windchill_f: 82.4
+            windchill_f: 82.4
     }, 
     location: {
         country: "Brazil", 
