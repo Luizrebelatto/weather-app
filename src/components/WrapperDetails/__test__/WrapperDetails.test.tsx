@@ -7,7 +7,7 @@ import WrapperDetails from "../index";
 jest.mock('@expo/vector-icons/FontAwesome5', () => 'FontAwesome5');
 jest.mock('@expo/vector-icons/MaterialCommunityIcons', () => 'MaterialCommunityIcons');
 
-describe("Component WrapperNextForecast", () => {
+describe("WrapperNextForecast", () => {
     it('the component WrapperDetails rendered', () => {
         render(
             <ThemeProvider theme={theme}>
