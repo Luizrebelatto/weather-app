@@ -25,7 +25,7 @@ module.exports = function (api) {
             services: "./src/services",
             stores: "./src/stores",
           },
-          extensions: [".js", ".jsx", ".ts", ".tsx"],
+          extensions: [".js", ".jsx"],
         },
       ],
     ],
