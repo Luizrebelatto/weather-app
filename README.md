@@ -42,6 +42,12 @@ yarn test
 yarn test --verbose --coverage 
 ```
 
+### ✅ Unit Tests Cases
+<img width="650" alt="Screenshot 2025-03-28 at 08 16 50" src="https://github.com/user-attachments/assets/bdb0a69e-8847-41e0-9db1-290ffb912d31" />
+
+### Coverage Tests
+<img width="1511" alt="Screenshot 2025-03-28 at 08 20 19" src="https://github.com/user-attachments/assets/eab1f573-e3d7-4cef-932b-aad7db4f5064" />
+
 ### 📱 Screenshots
 
  |              Android               |              IOS               |
