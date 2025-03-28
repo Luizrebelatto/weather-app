@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1743085328317" clover="3.2.0">
-  <project timestamp="1743085328318" name="All files">
-    <metrics statements="42" coveredstatements="38" conditionals="2" coveredconditionals="0" methods="21" coveredmethods="17" elements="65" coveredelements="55" complexity="0" loc="42" ncloc="42" packages="10" files="16" classes="16"/>
+<coverage generated="1743123337031" clover="3.2.0">
+  <project timestamp="1743123337031" name="All files">
+    <metrics statements="31" coveredstatements="31" conditionals="0" coveredconditionals="0" methods="16" coveredmethods="16" elements="47" coveredelements="47" complexity="0" loc="31" ncloc="31" packages="9" files="14" classes="14"/>
     <package name="mocks">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="mockCurrentData.ts" path="/Users/luizgabriel/Desktop/weather-app/mocks/mockCurrentData.ts">
@@ -37,11 +37,11 @@
       </file>
       <file name="styles.ts" path="/Users/luizgabriel/Desktop/weather-app/src/components/ItemForecastToday/styles.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="3" count="2" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.WrapperDetails">
@@ -57,26 +57,6 @@
         <line num="13" count="1" type="stmt"/>
         <line num="15" count="9" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components.WrapperForecastToday">
-      <metrics statements="11" coveredstatements="7" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="1"/>
-      <file name="index.tsx" path="/Users/luizgabriel/Desktop/weather-app/src/components/WrapperForecastToday/index.tsx">
-        <metrics statements="4" coveredstatements="3" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="1"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-      </file>
-      <file name="styles.ts" path="/Users/luizgabriel/Desktop/weather-app/src/components/WrapperForecastToday/styles.ts">
-        <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.WrapperNextForecast">

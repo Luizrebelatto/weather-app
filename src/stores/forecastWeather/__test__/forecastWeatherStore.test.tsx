@@ -1,6 +1,5 @@
 import { renderHook, act } from '@testing-library/react-native';
 import { useForecastWeather } from 'stores';
-import { IForecastWeather } from '../types';
 import { mockForecastData } from '../../../../mocks/mockForecastData';
 
 describe('forecastWeather Store', () => {
