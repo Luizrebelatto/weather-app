@@ -9,7 +9,7 @@ interface IItemForecastToday {
 
 export default function ItemForecastToday(data: IItemForecastToday) {
     return (
-        <Wrapper>
+        <Wrapper testID="item-forecast-today">
             <Text>{`${data.temperature}`}</Text>
             <ImageIcon
                 source={{ uri: `https:${data.iconImage}` }}

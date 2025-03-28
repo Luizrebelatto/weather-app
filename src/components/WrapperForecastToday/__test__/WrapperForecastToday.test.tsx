@@ -1,98 +1,80 @@
-import React from 'react';
-import { render } from '@testing-library/react-native';
-import WrapperForecastToday from '../index';
+import React from "react";
+import { render } from "@testing-library/react-native";
+import WrapperForecastToday from "../index";
+import { IForecastWeather } from "../../../stores/forecastWeather/types";
+import { ThemeProvider } from "styled-components/native";
+import theme from "general/theme";
 
-// Mock data for testing
-const mockForecastData = {
+const mockData: IForecastWeather = {
     location: {
-        localtime: '2024-03-26 14:30:00'
+        localtime: "2024-03-28 12:00", 
     },
     forecast: {
         forecastday: [
             {
                 day: {
-                    condition: {
-                        icon: 'sunny.png',
-                        text: 'Sunny'
-                    },
+                    condition: { text: "Sunny", icon: "//cdn.weather.com/sunny.png" },
                     maxtemp_c: 25,
-                    maxtemp_f: 77
-                }
+                    maxtemp_f: 77,
+                },
             },
             {
                 day: {
-                    condition: {
-                        icon: 'cloudy.png',
-                        text: 'Partly Cloudy'
-                    },
-                    maxtemp_c: 22,
-                    maxtemp_f: 72
-                }
-            }
-        ]
-    }
+                    condition: { text: "Rainy", icon: "//cdn.weather.com/rainy.png" },
+                    maxtemp_c: 18,
+                    maxtemp_f: 64,
+                },
+            },
+        ],
+    },
 };
 
-describe('WrapperForecastToday Component', () => {
-    it('renders correctly with Celsius temperatures', () => {
-        console.log("s")
-
-        // // Check header texts
-        // expect(getByText('Today')).toBeTruthy();
-        // expect(getByText(/March/)).toBeTruthy();
-        // expect(getByText(/26/)).toBeTruthy();
-
-        // // Check forecast items
-        // const forecastItems = getAllByTestId('item-forecast-today');
-        // expect(forecastItems.length).toBe(2);
-
-        // // Verify temperature display in Celsius
-        // expect(getByText('25 °C')).toBeTruthy();
-        // expect(getByText('22 °C')).toBeTruthy();
+describe("WrapperForecastToday Component", () => {
+    it("should render the title and formatted date", () => {
+        const { getByText } = render(
+            <ThemeProvider theme={theme}>
+                <WrapperForecastToday data={mockData} />
+            </ThemeProvider>
+        );
+        
+        expect(getByText("Today")).toBeTruthy();
+        expect(getByText("March 28")).toBeTruthy();
     });
 
-    // it('renders correctly with Fahrenheit temperatures', () => {
-    //     const { getByText, getAllByTestId } = render(
-    //         <WrapperForecastToday 
-    //             data={mockForecastData} 
-    //             isEnableCelsius={false} 
-    //         />
-    //     );
+    it("should render the forecast items correctly", () => {
+        const { getByText, getAllByTestId } = render(
+            <ThemeProvider theme={theme}>
+                <WrapperForecastToday data={mockData} />
+            </ThemeProvider>
+        );
+        
+        expect(getByText("Sunny")).toBeTruthy();
+        expect(getByText("Rainy")).toBeTruthy();
 
-    //     // Check header texts
-    //     expect(getByText('Today')).toBeTruthy();
-    //     expect(getByText(/March/)).toBeTruthy();
-    //     expect(getByText(/26/)).toBeTruthy();
+        expect(getByText("77 °F")).toBeTruthy();
+        expect(getByText("64 °F")).toBeTruthy();
 
-    //     // Check forecast items
-    //     const forecastItems = getAllByTestId('item-forecast-today');
-    //     expect(forecastItems.length).toBe(2);
+        expect(getAllByTestId("item-forecast-today")).toHaveLength(2);
+    });
 
-    //     // Verify temperature display in Fahrenheit
-    //     expect(getByText('77 °F')).toBeTruthy();
-    //     expect(getByText('72 °F')).toBeTruthy();
-    // });
+    it("should switch to Celsius when isEnableCelsius is true", () => {
+        const { getByText } = render(
+            <ThemeProvider theme={theme}>
+                <WrapperForecastToday data={mockData} isEnableCelsius={true} />
+            </ThemeProvider>
+        );
+        
+        expect(getByText("25 °C")).toBeTruthy();
+        expect(getByText("18 °C")).toBeTruthy();
+    });
 
-    // it('handles empty forecast data gracefully', () => {
-    //     const emptyForecastData = {
-    //         location: {
-    //             localtime: '2024-03-26 14:30:00'
-    //         },
-    //         forecast: {
-    //             forecastday: []
-    //         }
-    //     };
-
-    //     const { getByText } = render(
-    //         <WrapperForecastToday 
-    //             data={emptyForecastData} 
-    //             isEnableCelsius={true} 
-    //         />
-    //     );
-
-    //     // Check that header still renders
-    //     expect(getByText('Today')).toBeTruthy();
-    //     expect(getByText(/March/)).toBeTruthy();
-    //     expect(getByText(/26/)).toBeTruthy();
-    // });
+    it("should handle missing forecast data gracefully", () => {
+        const { getByText } = render(
+            <ThemeProvider theme={theme}>
+                <WrapperForecastToday data={{} as IForecastWeather} />
+            </ThemeProvider>
+        );
+        
+        expect(getByText("Today")).toBeTruthy();
+    });
 });
