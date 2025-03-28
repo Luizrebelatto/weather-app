@@ -25,7 +25,7 @@ export default function WrapperForecastToday({ data, isEnableCelsius }: IWrapper
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
             >
-                {data.forecast.forecastday.map((item, index) => (
+                {data?.forecast?.forecastday?.map((item, index) => (
                     <ItemForecastToday 
                         key={index}
                         iconImage={item.day.condition.icon}

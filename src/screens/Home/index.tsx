@@ -33,11 +33,12 @@ export default function Home() {
                     ios_backgroundColor="#3e3e3e"
                     onValueChange={toggleSwitch}
                     value={isEnabled}
+                    testID="temperature-switch"
                 />
             </View>
             <View style={{ gap: 20, width: "100%" }}>
                 {isLoadingCurrentWeather ? 
-                    <ActivityIndicator size={"large"} color="white"/> 
+                    <ActivityIndicator size={"large"} color="white" testID="loading-indicator"/> 
                 :
                     <>
                         <InfoForecast
@@ -55,7 +56,7 @@ export default function Home() {
                 }
                 
                 {isLoadingForecastWeather ? 
-                    <ActivityIndicator size={"large"} color="white"/> 
+                    <ActivityIndicator size={"large"} color="white" testID="loading-indicator"/> 
                 :
                     <WrapperForecastToday
                         data={forecastWeather}
