@@ -37,6 +37,11 @@ npx expo start
 yarn test
 ```
 
+**Run Coverage**
+```
+yarn test --verbose --coverage 
+```
+
 ### 📱 Screenshots
 
  |              Android               |              IOS               |
