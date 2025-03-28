@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for mocks/mockForecastData.ts</title>
+    <title>Code coverage report for src/screens/Home/index.tsx</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">mocks</a> mockForecastData.ts</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/screens/Home</a> index.tsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>12/12</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/0</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -112,7 +112,45 @@
 <a name='L47'></a><a href='#L47'>47</a>
 <a name='L48'></a><a href='#L48'>48</a>
 <a name='L49'></a><a href='#L49'>49</a>
-<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,55 +199,74 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const mockForecastData = {
-    current: {
-        cloud: 0, 
-        condition: {
-            code: 1000, 
-            icon: "//cdn.weatherapi.com/weather/64x64/day/113.png", 
-            text: "Sunny"
-        }, 
-        dewpoint_c: 14.2, 
-        dewpoint_f: 57.5, 
-        feelslike_c: 27.1, 
-        feelslike_f: 80.8, 
-        gust_kph: 9.5, 
-        gust_mph: 5.9, 
-        heatindex_c: 28.1, 
-        heatindex_f: 82.5, 
-        humidity: 66, 
-        is_day: 1, 
-        last_updated: "2025-03-23 10:30", 
-        last_updated_epoch: 1742736600, 
-        precip_in: 0, 
-        precip_mm: 0, 
-        pressure_in: 29.88, 
-        pressure_mb: 1012, 
-        temp_c: 27, 
-        temp_f: 80.6, 
-        uv: 5.5, 
-        vis_km: 10, 
-        vis_miles: 6, 
-        wind_degree: 293, 
-        wind_dir: "WNW", 
-        wind_kph: 8.3, 
-        wind_mph: 5.1, 
-        windchill_c: 28, 
-        windchill_f: 82.4
-    }, 
-    forecast: {
-        forecastday: [[Object], [Object], [Object]]
-    }, 
-    location: {
-        country: "Brazil", 
-        lat: -29.95, 
-        localtime: "2025-03-23 10:33", 
-        localtime_epoch: 1742736787, 
-        lon: -51.0833, 
-        name: "Cachoeirinha", 
-        region: "Rio Grande do Sul", 
-        tz_id: "America/Sao_Paulo"
-    }
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from "react";
+import { Title, Wrapper } from "./styles";
+import { View, Switch, ActivityIndicator } from "react-native"
+&nbsp;
+import { InfoForecast, WrapperDetails, WrapperForecastToday } from "components";
+import { useFetchDataForecastWeather, useFetchDataCurrentWeather } from "hooks"
+import { useForecastWeather, useCurrentWeather } from "stores";
+import theme from "general/theme";
+&nbsp;
+export default function Home() {
+    const { currentWeather } = useCurrentWeather()
+    const { forecastWeather } = useForecastWeather()
+&nbsp;
+    const { isLoading: isLoadingCurrentWeather, error: errorCurrentWeather } = useFetchDataCurrentWeather();
+    const { isLoading: isLoadingForecastWeather, error: errorForecast } = useFetchDataForecastWeather();
+&nbsp;
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () =&gt; setIsEnabled(previousState =&gt; !previousState);
+&nbsp;
+    return (
+        &lt;Wrapper
+            colors={[
+                theme.colors.blue_dark, 
+                theme.colors.blue_medium, 
+                theme.colors.blue_soft
+            ]}
+        &gt;
+            &lt;View style={{ flexDirection: "row", alignItems: "center" }}&gt;
+                &lt;Title&gt;{isEnabled ? "°C" : "°F"}&lt;/Title&gt;
+                &lt;Switch
+                    trackColor={{false: theme.colors.white, true: theme.colors.blue_soft}}
+                    thumbColor={isEnabled ? theme.colors.blue_very_dark : '#f4f3f4'}
+                    ios_backgroundColor="#3e3e3e"
+                    onValueChange={toggleSwitch}
+                    value={isEnabled}
+                    testID="temperature-switch"
+                /&gt;
+            &lt;/View&gt;
+            &lt;View style={{ gap: 20, width: "100%" }}&gt;
+                {isLoadingCurrentWeather ? 
+                    &lt;ActivityIndicator size={"large"} color="white" testID="loading-indicator"/&gt; 
+                :
+                    &lt;&gt;
+                        &lt;InfoForecast
+                            iconImage={currentWeather.current.condition.icon}
+                            temperature={isEnabled ? currentWeather.current.temp_c : currentWeather.current.temp_f}
+                            description={currentWeather.current.condition.text}
+                            unit={isEnabled ? "°C" : "°F"}
+                        /&gt;
+                        &lt;WrapperDetails
+                            humidity={currentWeather.current.humidity}
+                            precip={currentWeather.current.precip_mm}
+                            pressure={currentWeather.current.pressure_in}
+                        /&gt;
+                    &lt;/&gt;
+                }
+                
+                {isLoadingForecastWeather ? 
+                    &lt;ActivityIndicator size={"large"} color="white" testID="loading-indicator"/&gt; 
+                :
+                    &lt;WrapperForecastToday
+                        data={forecastWeather}
+                        isEnableCelsius={isEnabled}
+                    /&gt;
+                }
+            &lt;/View&gt;
+        &lt;/Wrapper&gt;
+    )
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -219,14 +276,14 @@
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2025-03-28T11:15:36.344Z
             </div>
-        <script src="../prettify.js"></script>
+        <script src="../../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="../../../sorter.js"></script>
+        <script src="../../../block-navigation.js"></script>
     </body>
 </html>
     
