@@ -23,7 +23,7 @@ describe("WeatherApi", () => {
     
     mockGet.mockResolvedValueOnce({ data: mockData });
 
-    const result = await weatherApi.getCurrentWeather();
+    const result = await weatherApi.getCurrentWeather('cachoeirinha');
     
     expect(mockGet).toHaveBeenCalledWith(`current.json?q=cachoeirinha&key=${apiConfig.API_KEY}`);
     expect(result).toEqual(mockData);
@@ -33,7 +33,7 @@ describe("WeatherApi", () => {
     const mockError = new Error("Network Error");
     mockGet.mockRejectedValueOnce(mockError);
 
-    await expect(weatherApi.getCurrentWeather()).rejects.toThrow("Network Error");
+    await expect(weatherApi.getCurrentWeather('cachoeirinha')).rejects.toThrow("Network Error");
   });
 
   it("should fetch forecast weather successfully", async () => {
@@ -41,7 +41,7 @@ describe("WeatherApi", () => {
     
     mockGet.mockResolvedValueOnce( mockData );
 
-    const result = await weatherApi.getForecastWeather();
+    const result = await weatherApi.getForecastWeather('cachoeirinha', 14);
     
     expect(mockGet).toHaveBeenCalledWith(`forecast.json?q=cachoeirinha&days=14&key=${apiConfig.API_KEY}`);
     expect(result).toEqual(mockData);
@@ -51,6 +51,6 @@ describe("WeatherApi", () => {
     const mockError = new Error("API Error");
     mockGet.mockRejectedValueOnce(mockError);
 
-    await expect(weatherApi.getForecastWeather()).rejects.toThrow("API Error");
+    await expect(weatherApi.getForecastWeather('cachoeirinha', 14)).rejects.toThrow("API Error");
   });
 });
