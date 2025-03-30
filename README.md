@@ -2,7 +2,18 @@
 
 Weather app connect with api service to collect data about forecast
 
-### 🛠 Tech and Libraries
+### 📱 Tech and Libraries
+
+- React Native
+- Javascript and typescript
+- Styled-components
+- React Query
+- Zustand
+- Axios
+
+### 👨🏻‍💻 Features
+- shows the current weather forecast
+- shows weather forecast for the next 14 days
 
 - React Native
 - Javascript and typescript
